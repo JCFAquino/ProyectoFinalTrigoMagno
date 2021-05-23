@@ -23,7 +23,7 @@ body {
     grid-template-rows: 35vh auto 20vh; }
     body #Grilla .Header {
       grid-area: Header;
-      background: linear-gradient(0deg, #b0cc62 0%, #e5ec9f 50%); }
+      background-image: url(/Media/FondoMain.png); }
       body #Grilla .Header__NombreLogo {
         grid-area: NombreLogo;
         margin: 0;
@@ -93,15 +93,17 @@ body {
   grid-template-rows: 100%;
   grid-template-areas: "Titulo RRSS"; }
   #PieDePagina .TituloPiePagina {
-    grid-area: Titulo; }
+    grid-area: Titulo;
+    padding-top: 10px; }
   #PieDePagina .RRSS {
     align-content: flex-end;
     align-items: flex-end;
     justify-content: right;
     width: 100%;
-    grid-area: RRSS; }
+    grid-area: RRSS;
+    padding-top: 30px; }
     #PieDePagina .RRSS__Item {
-      height: 20%;
+      height: 22%;
       width: 100%;
       margin: 0%;
       padding: 2%;
@@ -110,8 +112,8 @@ body {
       flex-direction: row;
       justify-items: flex-start; }
       #PieDePagina .RRSS__Item h3 {
-        font-size: smaller;
-        text-align: right;
+        font-size: small;
+        text-align: center;
         font-weight: bold;
         margin-top: 4px; }
     #PieDePagina .RRSS__img {

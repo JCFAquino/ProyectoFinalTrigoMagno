@@ -17,7 +17,7 @@ body {
 
         .Header {
             grid-area: Header;
-            background: linear-gradient(0deg, rgba(176, 204, 98, 1) 0%, rgba(229, 236, 159, 1) 50%);
+            background-image:url(/Media/FondoMain.png);
 
             &__NombreLogo {
                 grid-area: NombreLogo;
@@ -121,7 +121,8 @@ body {
     grid-template-areas: 
         "Titulo RRSS";
     .TituloPiePagina{
-        grid-area: Titulo;    
+        grid-area: Titulo;
+        padding-top: 10px;    
     }
     .RRSS{
         @extend .Tarjetas;
@@ -130,8 +131,9 @@ body {
         justify-content: right;
         width: 100%;
         grid-area: RRSS;
+        padding-top: 30px;
         &__Item{
-            height: 20%;
+            height: 22%;
             width: 100%;
             margin: 0%;
             padding: 2%;
@@ -141,8 +143,8 @@ body {
             
             justify-items: flex-start;
             h3{
-                font-size: smaller;
-                text-align: right;
+                font-size: small;
+                text-align: center;
                 font-weight: bold;
                 margin-top: 4px;
             }

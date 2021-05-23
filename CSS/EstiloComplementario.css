@@ -20,22 +20,23 @@ body {
         "SeccionPrincipal"
         "PieDePagina";
     grid-template-columns: 100%;
-    grid-template-rows: 35vh auto 20vh;
+    grid-template-rows: 35vh auto 60vh;
 
 }
 
 #Header {
-    background: linear-gradient(0deg, #b0cc62 0%, #e5ec9f 50%);
-    background-repeat: no-repeat;
-    background-size: cover;
     grid-area: Header;
     max-height: 40vh;
+    background-image: url(/Media/FondoMain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid black 2px;
 }
 
 main {
-    background-color: #B3B0A1; ;
-    background-repeat: no-repeat;
+    background-image: url(/Media/Fondo1.png);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h2 {
@@ -154,8 +155,8 @@ aside {
     grid-template-columns: 10% 55% 25% 10%;
     grid-template-rows: 6% 27% 5% 30% 30% 2%;
     grid-template-areas:
-        "marg marg marg marg"
-        "MARG1 Carousel Carousel Marg2"
+        "Carousel Carousel Carousel Carousel"
+        "Carousel Carousel Carousel Carousel"
         "titulo titulo titulo espacio"
         "parrafo1  parrafo1 media media"
         "parrafo2 parrafo2 parrafo2 parrafo2"
@@ -262,14 +263,34 @@ form {
 
 .Titulos {
     grid-area: titulo;
+    padding-top: 5%;
 }
 
 .Parrafo1 {
     grid-area: parrafo1;
+    text-align: center;
+    padding: 10%;
+}
+.Parrafo1 p{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 2px;
+    padding: 5px;
 }
 
 .Parrafo2 {
     grid-area: parrafo2;
+    display: flex;
+    justify-items: flex-start;
+    flex-direction: column;
+}
+.Parrafo2 a{
+    text-align: center;
+}
+.Parrafo2 p{
+    padding-top: 10px;
+    text-align: center;
 }
 
 .Media {
@@ -279,7 +300,7 @@ form {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 20px;
+    padding: 5%;
 }
 
 video {
@@ -354,7 +375,6 @@ img {
 #Header {
     height: 100%;
     margin: 0px 0px;
-    border: none;
     padding: 0px;
     display: flex;
     justify-content: space-between;
@@ -374,7 +394,9 @@ img {
     margin: 0px;
     padding: 0px;
     grid-area: PieDePagina;
-    background: linear-gradient(180deg, rgba(233, 237, 201, 1) 0%, rgba(204, 213, 174, 1) 45%, rgba(254, 250, 224, 1) 65%, rgba(212, 163, 115, 1) 100%);
+    background-image: url(/Media/FondoMain.png);
+    background-size: cover;
+    border-top: solid 2px;
 
 }
 
@@ -411,6 +433,7 @@ img {
 
 .MenuPrincipal ul {
     width: 100%;
+    height: 15%;
 
 }
 
@@ -456,8 +479,9 @@ ul ul li.Desplegable {
 
 ul li:hover ul {
     display: block;
-    padding: 17px;
+    padding: 20px;
     height: auto;
+    z-index: 2;
 }
 
 /*fin menu con submenu*/
@@ -580,6 +604,9 @@ body #Grilla #SeccionPrincipalProd .SeccionProducto{
         grid-template-areas:
             "NombreLogo"
             "Nav";
+    }
+    aside{
+        display: none;
     }
 
     .NombreLogo {
