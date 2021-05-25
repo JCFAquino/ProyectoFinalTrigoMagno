@@ -23,7 +23,37 @@ body {
     grid-template-rows: 35vh auto 20vh; }
     body #Grilla .Header {
       grid-area: Header;
-      background-image: url(/Media/FondoMain.png); }
+      background-image: url(../Media/FondoMain.png);
+      height: 100%;
+      margin: 0px 0px;
+      padding: 0px;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 25vw 75vw;
+      grid-template-areas: "NombreLogo JSyMenu"; }
+      body #Grilla .Header__JSyMenu {
+        grid-area: JSyMenu;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 85% 15%;
+        grid-template-areas: "JS" "Menu"; }
+        body #Grilla .Header__JSyMenu .JS {
+          grid-area: JS;
+          display: flex;
+          flex-direction: row; }
+          body #Grilla .Header__JSyMenu .JS__Trigo, body #Grilla .Header__JSyMenu .JS__Magno {
+            font-family: 'Pattaya', sans-serif;
+            font-size: 15em;
+            color: #83643d;
+            text-transform: uppercase;
+            text-shadow: -7px -7px black;
+            opacity: .8;
+            padding-left: 5vw; }
+          body #Grilla .Header__JSyMenu .JS__Magno {
+            transform: translate(-7vw, 12vh);
+            opacity: 1;
+            font-size: 10em;
+            padding-left: 4vw; }
       body #Grilla .Header__NombreLogo {
         grid-area: NombreLogo;
         margin: 0;
@@ -35,13 +65,16 @@ body {
       body #Grilla .Header__Logo {
         grid-area: logo;
         display: flex;
-        align-content: center;
-        justify-content: center; }
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 20px; }
       body #Grilla .Header__Nombre {
         grid-area: nombre;
         display: flex;
-        justify-content: center;
-        align-content: center; }
+        align-content: center;
+        align-items: flex-start;
+        padding-left: 75px;
+        padding-top: 10px; }
     body #Grilla #SeccionPrincipalProd {
       background-color: #B3B0A1; }
       body #Grilla #SeccionPrincipalProd .Tarjetas, body #Grilla #SeccionPrincipalProd #PieDePagina .RRSS, #PieDePagina body #Grilla #SeccionPrincipalProd .RRSS {
@@ -54,8 +87,10 @@ body {
         @media only screen and (max-width: 1024px) {
           body #Grilla #SeccionPrincipalProd .SeccionProducto {
             flex-direction: column; } }
-    body #Grilla__MenuPrincipal ul li a {
-      color: white; }
+    body #Grilla__MenuPrincipal {
+      grid-area: Menu; }
+      body #Grilla__MenuPrincipal ul li a {
+        color: white; }
     body #Grilla .Card {
       border: solid black 2px;
       margin: 3%;

@@ -17,7 +17,48 @@ body {
 
         .Header {
             grid-area: Header;
-            background-image:url(/Media/FondoMain.png);
+            background-image: url(../Media/FondoMain.png);
+            height: 100%;
+            margin: 0px 0px;
+            padding: 0px;
+            display: grid;
+            grid-template-rows: 100%;
+            grid-template-columns: 25vw 75vw;
+            grid-template-areas:
+                "NombreLogo JSyMenu";
+
+            &__JSyMenu {
+                grid-area: JSyMenu;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 85% 15%;
+                grid-template-areas: 
+                    "JS"
+                    "Menu";
+                .JS{
+                    grid-area: JS;
+                    display: flex;
+                    flex-direction: row;
+                    &__Trigo{
+                        font-family: 'Pattaya', sans-serif;
+                        font-size: 15em;
+                        color: #83643d;
+                        text-transform: uppercase;
+                        text-shadow: -7px -7px black;
+                        opacity: .8;
+                        padding-left: 5vw
+                    }
+                    &__Magno{
+                        @extend .JS__Trigo;
+                        transform: translate(-7vw, 12vh);
+                        opacity: 1;
+                        font-size: 10em;
+                        padding-left: 4vw;
+                    }
+                }
+
+               
+            }
 
             &__NombreLogo {
                 grid-area: NombreLogo;
@@ -34,35 +75,45 @@ body {
             &__Logo {
                 grid-area: logo;
                 display: flex;
-                align-content: center;
-                justify-content: center;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 20px;
             }
 
             &__Nombre {
                 grid-area: nombre;
                 display: flex;
-                justify-content: center;
                 align-content: center;
+                align-items: flex-start;
+                
+                padding-left: 75px;
+                padding-top: 10px;
+                
             }
         }
-        #SeccionPrincipalProd{
+
+        #SeccionPrincipalProd {
             background-color: #B3B0A1;
-            .Tarjetas{
+
+            .Tarjetas {
                 display: flex;
                 flex-flow: column;
             }
-            .SeccionProducto{
+
+            .SeccionProducto {
                 display: flex;
                 flex-direction: row;
                 flex-flow: wrap;
-                @media only screen and (max-width: 1024px){
+
+                @media only screen and (max-width: 1024px) {
                     flex-direction: column;
-                } 
+                }
             }
-            
+
         }
 
         &__MenuPrincipal {
+            grid-area: Menu;
             ul {
                 li {
                     a {
@@ -79,29 +130,33 @@ body {
             width: 15vw;
             height: auto;
             display: flex;
-            
+
             align-content: space-between;
             flex-flow: column;
             background-color: #F0F0E6;
-            @media only screen and (max-width: 1024px){
+
+            @media only screen and (max-width: 1024px) {
                 width: 80vw;
                 margin: 10%;
             }
-            
-            &__Img{
+
+            &__Img {
                 border-radius: 3%;
                 height: 25vh;
             }
-            &__NombreProducto{
+
+            &__NombreProducto {
                 text-align: center;
                 margin: 5%;
             }
-            &__Boton{
+
+            &__Boton {
                 width: 50%;
                 text-align: center;
                 margin: 0% 25% 5% 25%;
             }
-            &__Precio{
+
+            &__Precio {
                 text-align: center;
             }
         }
@@ -118,13 +173,15 @@ body {
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: 100%;
-    grid-template-areas: 
+    grid-template-areas:
         "Titulo RRSS";
-    .TituloPiePagina{
+
+    .TituloPiePagina {
         grid-area: Titulo;
-        padding-top: 10px;    
+        padding-top: 10px;
     }
-    .RRSS{
+
+    .RRSS {
         @extend .Tarjetas;
         align-content: flex-end;
         align-items: flex-end;
@@ -132,7 +189,8 @@ body {
         width: 100%;
         grid-area: RRSS;
         padding-top: 30px;
-        &__Item{
+
+        &__Item {
             height: 22%;
             width: 100%;
             margin: 0%;
@@ -140,18 +198,20 @@ body {
             font-size: small;
             display: flex;
             flex-direction: row;
-            
+
             justify-items: flex-start;
-            h3{
+
+            h3 {
                 font-size: small;
                 text-align: center;
                 font-weight: bold;
                 margin-top: 4px;
             }
         }
-        &__img{
+
+        &__img {
             max-width: 70%;
             max-height: 70%;
-        }    
+        }
     }
 }
