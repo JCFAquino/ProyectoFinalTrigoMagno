@@ -23,7 +23,7 @@ body {
             padding: 0px;
             display: grid;
             grid-template-rows: 100%;
-            grid-template-columns: 25vw 75vw;
+            grid-template-columns: 25% 75%;
             grid-template-areas:
                 "NombreLogo JSyMenu";
 
@@ -41,7 +41,7 @@ body {
                     flex-direction: row;
                     &__Trigo{
                         font-family: 'Pattaya', sans-serif;
-                        font-size: 15em;
+                        font-size: 12vw;
                         color: #83643d;
                         text-transform: uppercase;
                         text-shadow: -7px -7px black;
@@ -52,7 +52,7 @@ body {
                         @extend .JS__Trigo;
                         transform: translate(-7vw, 12vh);
                         opacity: 1;
-                        font-size: 10em;
+                        font-size: 8vw;
                         padding-left: 4vw;
                     }
                 }
@@ -104,6 +104,7 @@ body {
                 display: flex;
                 flex-direction: row;
                 flex-flow: wrap;
+                justify-content: space-around;
 
                 @media only screen and (max-width: 1024px) {
                     flex-direction: column;
@@ -171,7 +172,7 @@ body {
 #PieDePagina {
     grid-area: PieDePagina;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 80% 20%;
     grid-template-rows: 100%;
     grid-template-areas:
         "Titulo RRSS";
@@ -186,7 +187,7 @@ body {
         align-content: flex-end;
         align-items: flex-end;
         justify-content: right;
-        width: 100%;
+        
         grid-area: RRSS;
         padding-top: 30px;
 
@@ -195,6 +196,7 @@ body {
             width: 100%;
             margin: 0%;
             padding: 2%;
+            padding-right: 0%;
             font-size: small;
             display: flex;
             flex-direction: row;
@@ -213,5 +215,10 @@ body {
             max-width: 70%;
             max-height: 70%;
         }
+    }
+}
+.SeccionPrincipalQS{
+    .Titulos{
+        text-align: center;
     }
 }
