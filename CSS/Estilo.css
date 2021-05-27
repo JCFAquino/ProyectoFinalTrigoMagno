@@ -21,6 +21,12 @@ body {
     grid-template-areas: "Header" "SeccionPrincipal" "PieDePagina";
     grid-template-columns: 100%;
     grid-template-rows: 35vh auto 20vh; }
+    @media only screen and (max-width: 768px) {
+      body #Grilla {
+        grid-template-rows: 45vh auto 30vh; } }
+    @media only screen and (max-width: 1024px) {
+      body #Grilla {
+        grid-template-rows: 40vh auto 35vh; } }
     body #Grilla .Header {
       grid-area: Header;
       background-image: url(../Media/FondoMain.png);
@@ -31,93 +37,147 @@ body {
       grid-template-rows: 100%;
       grid-template-columns: 25% 75%;
       grid-template-areas: "NombreLogo JSyMenu"; }
-      body #Grilla .Header__JSyMenu {
-        grid-area: JSyMenu;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 85% 15%;
-        grid-template-areas: "JS" "Menu"; }
-        body #Grilla .Header__JSyMenu .JS {
-          grid-area: JS;
-          display: flex;
-          flex-direction: row; }
-          body #Grilla .Header__JSyMenu .JS__Trigo, body #Grilla .Header__JSyMenu .JS__Magno {
-            font-family: 'Pattaya', sans-serif;
-            font-size: 12vw;
-            color: #83643d;
-            text-transform: uppercase;
-            text-shadow: -7px -7px black;
-            opacity: .8;
-            padding-left: 5vw; }
-          body #Grilla .Header__JSyMenu .JS__Magno {
-            transform: translate(-7vw, 12vh);
-            opacity: 1;
-            font-size: 8vw;
-            padding-left: 4vw; }
-      body #Grilla .Header__NombreLogo {
-        grid-area: NombreLogo;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 80% 20%;
-        grid-template-areas: "logo" "nombre"; }
-      body #Grilla .Header__Logo {
-        grid-area: logo;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 20px; }
-      body #Grilla .Header__Nombre {
-        grid-area: nombre;
-        display: flex;
-        align-content: center;
-        align-items: flex-start;
-        padding-left: 75px;
-        padding-top: 10px; }
-    body #Grilla #SeccionPrincipalProd {
-      background-color: #B3B0A1; }
-      body #Grilla #SeccionPrincipalProd .Tarjetas, body #Grilla #SeccionPrincipalProd #PieDePagina .RRSS, #PieDePagina body #Grilla #SeccionPrincipalProd .RRSS {
-        display: flex;
-        flex-flow: column; }
-      body #Grilla #SeccionPrincipalProd .SeccionProducto {
-        display: flex;
-        flex-direction: row;
-        flex-flow: wrap;
-        justify-content: space-around; }
-        @media only screen and (max-width: 1024px) {
-          body #Grilla #SeccionPrincipalProd .SeccionProducto {
-            flex-direction: column; } }
-    body #Grilla__MenuPrincipal {
-      grid-area: Menu; }
-      body #Grilla__MenuPrincipal ul li a {
-        color: white; }
-    body #Grilla .Card {
-      border: solid black 2px;
-      margin: 3%;
-      border-radius: 3%;
-      width: 15vw;
-      height: auto;
-      display: flex;
-      align-content: space-between;
-      flex-flow: column;
-      background-color: #F0F0E6; }
       @media only screen and (max-width: 1024px) {
-        body #Grilla .Card {
-          width: 80vw;
-          margin: 10%; } }
-      body #Grilla .Card__Img {
-        border-radius: 3%;
-        height: 25vh; }
-      body #Grilla .Card__NombreProducto {
-        text-align: center;
-        margin: 5%; }
-      body #Grilla .Card__Boton {
-        width: 50%;
-        text-align: center;
-        margin: 0% 25% 5% 25%; }
-      body #Grilla .Card__Precio {
-        text-align: center; }
+        body #Grilla .Header {
+          height: 100%;
+          margin: 0px 0px;
+          border: none;
+          padding: 0px;
+          display: grid;
+          grid-template-columns: 30% 70%;
+          grid-template-rows: 85% 15%;
+          grid-template-areas: "NombreLogo espacio" "NombreLogo Nav"; } }
+      @media only screen and (max-width: 768px) {
+        body #Grilla .Header {
+          height: 100%;
+          margin: 0px 0px;
+          border: none;
+          padding: 0px;
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 85% 15%;
+          grid-template-areas: "NombreLogo" "Nav";
+          max-height: 100%; } }
+    body #Grilla__JSyMenu {
+      grid-area: JSyMenu;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 85% 15%;
+      grid-template-areas: "JS" "Menu"; }
+      @media only screen and (max-width: 1024px) {
+        body #Grilla__JSyMenu {
+          display: flex;
+          align-items: flex-end; } }
+      body #Grilla__JSyMenu .JS {
+        grid-area: JS;
+        display: flex;
+        flex-direction: row; }
+        @media only screen and (max-width: 1024px) {
+          body #Grilla__JSyMenu .JS {
+            display: none; } }
+        body #Grilla__JSyMenu .JS__Trigo, body #Grilla__JSyMenu .JS__Magno {
+          font-family: 'Pattaya', sans-serif;
+          font-size: 12vw;
+          color: #83643d;
+          text-transform: uppercase;
+          text-shadow: -7px -7px black;
+          opacity: .8;
+          padding-left: 5vw; }
+        body #Grilla__JSyMenu .JS__Magno {
+          transform: translate(-7vw, 12vh);
+          opacity: 1;
+          font-size: 8vw;
+          padding-left: 4vw; }
+    body #Grilla__NombreLogo {
+      grid-area: NombreLogo;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 80% 20%;
+      grid-template-areas: "logo" "nombre"; }
+      @media only screen and (max-width: 768px) {
+        body #Grilla__NombreLogo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center; } }
+    body #Grilla__Logo {
+      grid-area: logo;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px; }
+      @media only screen and (max-width: 1024px) {
+        body #Grilla__Logo {
+          padding-left: 15px; } }
+      @media only screen and (max-width: 768px) {
+        body #Grilla__Logo {
+          max-height: 75%;
+          padding: 0px;
+          display: flex;
+          justify-content: center; } }
+    body #Grilla__Nombre {
+      grid-area: nombre;
+      display: flex;
+      align-content: center;
+      align-items: flex-start;
+      padding-left: 75px;
+      padding-top: 10px; }
+      @media only screen and (max-width: 1024px) {
+        body #Grilla__Nombre {
+          padding-left: 35px; } }
+      @media only screen and (max-width: 768px) {
+        body #Grilla__Nombre {
+          display: none; } }
+  body #SeccionPrincipalProd {
+    background-color: #B3B0A1; }
+    body #SeccionPrincipalProd .Tarjetas, body #SeccionPrincipalProd #PieDePagina .RRSS, #PieDePagina body #SeccionPrincipalProd .RRSS {
+      display: flex;
+      flex-flow: column; }
+    body #SeccionPrincipalProd .SeccionProducto {
+      display: flex;
+      flex-direction: row;
+      flex-flow: wrap;
+      justify-content: space-around; }
+      @media only screen and (max-width: 768px) {
+        body #SeccionPrincipalProd .SeccionProducto {
+          flex-direction: column; } }
+  body__MenuPrincipal {
+    grid-area: Menu; }
+    body__MenuPrincipal ul li a {
+      color: white; }
+  body .Card {
+    border: solid black 2px;
+    margin: 3%;
+    border-radius: 3%;
+    width: 15vw;
+    height: auto;
+    display: flex;
+    align-content: space-between;
+    flex-flow: column;
+    background-color: #F0F0E6; }
+    @media only screen and (max-width: 1024px) {
+      body .Card {
+        width: 30vw;
+        margin: 10%; } }
+    @media only screen and (max-width: 768px) {
+      body .Card {
+        width: 80vw; } }
+    body .Card__Img {
+      border-radius: 3%;
+      height: 25vh; }
+      @media only screen and (max-width: 768px) {
+        body .Card__Img {
+          height: auto; } }
+    body .Card__NombreProducto {
+      text-align: center;
+      margin: 5%; }
+    body .Card__Boton {
+      width: 50%;
+      text-align: center;
+      margin: 0% 25% 5% 25%; }
+    body .Card__Precio {
+      text-align: center; }
 
 #SeccionPrincipalProd {
   grid-area: SeccionPrincipal; }
@@ -127,7 +187,17 @@ body {
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: 100%;
-  grid-template-areas: "Titulo RRSS"; }
+  grid-template-areas: "Titulo"  "RRSS"; }
+  @media only screen and (max-width: 1024px) {
+    #PieDePagina {
+      grid-template-rows: 20% 80%;
+      grid-template-columns: 100%;
+      height: auto; } }
+  @media only screen and (max-width: 768px) {
+    #PieDePagina {
+      grid-template-rows: 20% 80%;
+      grid-template-columns: 100%;
+      height: auto; } }
   #PieDePagina .TituloPiePagina {
     grid-area: Titulo;
     padding-top: 10px; }
@@ -137,6 +207,19 @@ body {
     justify-content: right;
     grid-area: RRSS;
     padding-top: 30px; }
+    @media only screen and (max-width: 1024px) {
+      #PieDePagina .RRSS {
+        margin-left: 75%;
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        width: auto; } }
+    @media only screen and (max-width: 768px) {
+      #PieDePagina .RRSS {
+        margin-left: 75%;
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px; } }
     #PieDePagina .RRSS__Item {
       height: 22%;
       width: 100%;

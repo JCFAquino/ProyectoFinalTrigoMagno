@@ -15,6 +15,14 @@ body {
         grid-template-columns: 100%;
         grid-template-rows: 35vh auto 20vh;
 
+        @media only screen and (max-width: 768px) {
+            grid-template-rows: 45vh auto 30vh;
+        }
+        @media only screen and (max-width: 1024px){
+            grid-template-rows: 40vh auto 35vh;
+        }
+
+
         .Header {
             grid-area: Header;
             background-image: url(../Media/FondoMain.png);
@@ -27,19 +35,62 @@ body {
             grid-template-areas:
                 "NombreLogo JSyMenu";
 
+
+            @media only screen and (max-width: 1024px) {
+                    height: 100%;
+                    margin: 0px 0px;
+                    border: none;
+                    padding: 0px;
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                    grid-template-rows: 85% 15%;
+                    grid-template-areas:
+                        "NombreLogo espacio"
+                        "NombreLogo Nav";
+                }
+            @media only screen and (max-width: 768px){
+                
+                    height: 100%;
+                    margin: 0px 0px;
+                    border: none;
+                    padding: 0px;
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 85% 15%;
+                    grid-template-areas:
+                        "NombreLogo"
+                        "Nav";
+                    max-height: 100%;
+                
+            }
+                
+            }
+
             &__JSyMenu {
                 grid-area: JSyMenu;
                 display: grid;
                 grid-template-columns: 100%;
                 grid-template-rows: 85% 15%;
-                grid-template-areas: 
+                grid-template-areas:
                     "JS"
                     "Menu";
-                .JS{
+
+                @media only screen and (max-width: 1024px) {
+                    display: flex;
+                    align-items: flex-end;
+
+                }
+
+                .JS {
                     grid-area: JS;
                     display: flex;
                     flex-direction: row;
-                    &__Trigo{
+
+                    @media only screen and (max-width: 1024px) {
+                        display: none;
+                    }
+
+                    &__Trigo {
                         font-family: 'Pattaya', sans-serif;
                         font-size: 12vw;
                         color: #83643d;
@@ -48,7 +99,8 @@ body {
                         opacity: .8;
                         padding-left: 5vw
                     }
-                    &__Magno{
+
+                    &__Magno {
                         @extend .JS__Trigo;
                         transform: translate(-7vw, 12vh);
                         opacity: 1;
@@ -57,7 +109,7 @@ body {
                     }
                 }
 
-               
+
             }
 
             &__NombreLogo {
@@ -70,6 +122,12 @@ body {
                 grid-template-areas:
                     "logo"
                     "nombre";
+
+                @media only screen and (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
 
             &__Logo {
@@ -78,6 +136,17 @@ body {
                 align-items: center;
                 justify-content: flex-start;
                 padding-left: 20px;
+
+                @media only screen and (max-width: 1024px) {
+                    padding-left: 15px;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    max-height: 75%;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: center;
+                }
             }
 
             &__Nombre {
@@ -85,10 +154,19 @@ body {
                 display: flex;
                 align-content: center;
                 align-items: flex-start;
-                
+
                 padding-left: 75px;
                 padding-top: 10px;
-                
+
+                @media only screen and (max-width: 1024px) {
+                    padding-left: 35px;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    display: none;
+                }
+
+
             }
         }
 
@@ -106,7 +184,7 @@ body {
                 flex-flow: wrap;
                 justify-content: space-around;
 
-                @media only screen and (max-width: 1024px) {
+                @media only screen and (max-width: 768px) {
                     flex-direction: column;
                 }
             }
@@ -115,6 +193,7 @@ body {
 
         &__MenuPrincipal {
             grid-area: Menu;
+
             ul {
                 li {
                     a {
@@ -137,13 +216,19 @@ body {
             background-color: #F0F0E6;
 
             @media only screen and (max-width: 1024px) {
-                width: 80vw;
+                width: 30vw;
                 margin: 10%;
+            }
+            @media only screen and (max-width: 768px){
+                width: 80vw;
             }
 
             &__Img {
                 border-radius: 3%;
                 height: 25vh;
+                @media only screen and (max-width: 768px){
+                    height: auto;
+                }
             }
 
             &__NombreProducto {
@@ -163,7 +248,7 @@ body {
         }
 
     }
-}
+
 
 #SeccionPrincipalProd {
     grid-area: SeccionPrincipal;
@@ -175,7 +260,20 @@ body {
     grid-template-columns: 80% 20%;
     grid-template-rows: 100%;
     grid-template-areas:
-        "Titulo RRSS";
+        "Titulo" 
+        "RRSS";
+
+    @media only screen and (max-width: 1024px) {
+        grid-template-rows: 20% 80%;
+        grid-template-columns: 100%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+        grid-template-rows: 20% 80%;
+        grid-template-columns: 100%;
+        height: auto;
+        }
 
     .TituloPiePagina {
         grid-area: Titulo;
@@ -187,9 +285,24 @@ body {
         align-content: flex-end;
         align-items: flex-end;
         justify-content: right;
-        
+
         grid-area: RRSS;
         padding-top: 30px;
+
+        @media only screen and (max-width: 1024px) {
+            margin-left: 75%;
+            margin-top: 0px;
+            padding-top: 0px;
+            padding-bottom: 5px;
+            width: auto;
+        }
+        @media only screen and (max-width: 768px){
+            margin-left: 75%;
+            margin-top: 0px;
+            padding-top: 0px;
+            padding-bottom: 5px;
+
+        }
 
         &__Item {
             height: 22%;
@@ -217,8 +330,9 @@ body {
         }
     }
 }
-.SeccionPrincipalQS{
-    .Titulos{
+
+.SeccionPrincipalQS {
+    .Titulos {
         text-align: center;
     }
 }
