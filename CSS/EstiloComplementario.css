@@ -424,7 +424,7 @@ img {
 }
 
 #PieDePagina ul {
-    width: 50%;
+    
     display: flex;
     flex-flow: column;
     align-items: flex-end;
@@ -603,7 +603,7 @@ ul li:hover ul {
     #SeccionPrincipalFlex {
 
         max-width: 100%;
-        height: 100vh;
+        height: auto;
 
 
     }
@@ -757,7 +757,7 @@ ul li:hover ul {
     #SeccionPrincipalFlex {
         
         max-width: 100%;
-        height: 100vh;
+        height: auto;
     }
     .Botones{
         display: flex;

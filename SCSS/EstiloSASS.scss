@@ -18,9 +18,11 @@ body {
         @media only screen and (max-width: 768px) {
             grid-template-rows: 45vh auto 30vh;
         }
-        @media only screen and (max-width: 1024px){
+
+        @media only screen and (max-width: 1024px) {
             grid-template-rows: 40vh auto 35vh;
         }
+
 
 
         .Header {
@@ -37,34 +39,35 @@ body {
 
 
             @media only screen and (max-width: 1024px) {
-                    height: 100%;
-                    margin: 0px 0px;
-                    border: none;
-                    padding: 0px;
-                    display: grid;
-                    grid-template-columns: 30% 70%;
-                    grid-template-rows: 85% 15%;
-                    grid-template-areas:
-                        "NombreLogo espacio"
-                        "NombreLogo Nav";
-                }
-            @media only screen and (max-width: 768px){
-                
-                    height: 100%;
-                    margin: 0px 0px;
-                    border: none;
-                    padding: 0px;
-                    display: grid;
-                    grid-template-columns: 100%;
-                    grid-template-rows: 85% 15%;
-                    grid-template-areas:
-                        "NombreLogo"
-                        "Nav";
-                    max-height: 100%;
-                
+                height: 100%;
+                margin: 0px 0px;
+                border: none;
+                padding: 0px;
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 85% 15%;
+                grid-template-areas:
+                    "NombreLogo espacio"
+                    "NombreLogo Nav";
             }
-                
+
+            @media only screen and (max-width: 768px) {
+
+                height: 100%;
+                margin: 0px 0px;
+                border: none;
+                padding: 0px;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 85% 15%;
+                grid-template-areas:
+                    "NombreLogo"
+                    "Nav";
+                max-height: 100%;
+
             }
+
+
 
             &__JSyMenu {
                 grid-area: JSyMenu;
@@ -78,8 +81,9 @@ body {
                 @media only screen and (max-width: 1024px) {
                     display: flex;
                     align-items: flex-end;
-
+                    grid-area: Nav;
                 }
+
 
                 .JS {
                     grid-area: JS;
@@ -111,6 +115,9 @@ body {
 
 
             }
+
+
+
 
             &__NombreLogo {
                 grid-area: NombreLogo;
@@ -219,14 +226,16 @@ body {
                 width: 30vw;
                 margin: 10%;
             }
-            @media only screen and (max-width: 768px){
+
+            @media only screen and (max-width: 768px) {
                 width: 80vw;
             }
 
             &__Img {
                 border-radius: 3%;
                 height: 25vh;
-                @media only screen and (max-width: 768px){
+
+                @media only screen and (max-width: 768px) {
                     height: auto;
                 }
             }
@@ -250,89 +259,93 @@ body {
     }
 
 
-#SeccionPrincipalProd {
-    grid-area: SeccionPrincipal;
-}
-
-#PieDePagina {
-    grid-area: PieDePagina;
-    display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: 100%;
-    grid-template-areas:
-        "Titulo" 
-        "RRSS";
-
-    @media only screen and (max-width: 1024px) {
-        grid-template-rows: 20% 80%;
-        grid-template-columns: 100%;
-        height: auto;
+    #SeccionPrincipalProd {
+        grid-area: SeccionPrincipal;
     }
 
-    @media only screen and (max-width: 768px) {
-        grid-template-rows: 20% 80%;
-        grid-template-columns: 100%;
-        height: auto;
-        }
-
-    .TituloPiePagina {
-        grid-area: Titulo;
-        padding-top: 10px;
-    }
-
-    .RRSS {
-        @extend .Tarjetas;
-        align-content: flex-end;
-        align-items: flex-end;
-        justify-content: right;
-
-        grid-area: RRSS;
-        padding-top: 30px;
+    #PieDePagina {
+        grid-area: PieDePagina;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "Titulo RRSS";
 
         @media only screen and (max-width: 1024px) {
-            margin-left: 75%;
-            margin-top: 0px;
-            padding-top: 0px;
-            padding-bottom: 5px;
-            width: auto;
-        }
-        @media only screen and (max-width: 768px){
-            margin-left: 50%;
-            margin-top: 0px;
-            padding-top: 0px;
-            padding-bottom: 5px;
-
+            grid-template-rows: 20% 80%;
+            grid-template-columns: 100%;
+            height: auto;
+            grid-template-areas:
+            "Titulo" 
+            "RRSS";
         }
 
-        &__Item {
-            height: 22%;
-            width: 100%;
-            margin: 0%;
-            padding: 2%;
-            padding-right: 0%;
-            font-size: small;
-            display: flex;
-            flex-direction: row;
+        @media only screen and (max-width: 768px) {
+            grid-template-rows: 20% 80%;
+            grid-template-columns: 100%;
+            height: auto;
+        }
 
-            justify-items: flex-start;
+        .TituloPiePagina {
+            grid-area: Titulo;
+            padding-top: 10px;
+        }
 
-            h3 {
+        .RRSS {
+            @extend .Tarjetas;
+            align-content: flex-end;
+            align-items: flex-end;
+            justify-content: right;
+
+            grid-area: RRSS;
+            padding-top: 30px;
+
+            @media only screen and (max-width: 1024px) {
+                margin-left: 75%;
+                margin-top: 0px;
+                padding-top: 0px;
+                padding-bottom: 5px;
+                width: auto;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin-left: 50%;
+                margin-top: 0px;
+                padding-top: 0px;
+                padding-bottom: 5px;
+
+            }
+
+            &__Item {
+                height: 22%;
+                width: 100%;
+                margin: 0%;
+                padding: 2%;
+                padding-right: 0%;
                 font-size: small;
-                text-align: center;
-                font-weight: bold;
-                margin-top: 4px;
+                display: flex;
+                flex-direction: row;
+
+                justify-items: flex-start;
+
+                h3 {
+                    font-size: small;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-top: 4px;
+                }
+            }
+
+            &__img {
+                max-width: 70%;
+                max-height: 70%;
             }
         }
-
-        &__img {
-            max-width: 70%;
-            max-height: 70%;
-        }
     }
-}
 
-.SeccionPrincipalQS {
-    .Titulos {
-        text-align: center;
+    .SeccionPrincipalQS {
+        .Titulos {
+            text-align: center;
+        }
     }
 }
