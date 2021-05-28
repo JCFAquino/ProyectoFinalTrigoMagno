@@ -714,8 +714,11 @@ ul li:hover ul {
         display: flex;
         justify-content: center;
         padding: 0%;
-        height: 60%;
+        
 
+    }
+    .Header__JSyMenu{
+        align-items: center;
     }
     .MenuPrincipal ul{
         width: 100%;

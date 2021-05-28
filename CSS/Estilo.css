@@ -216,7 +216,7 @@ body {
         width: auto; } }
     @media only screen and (max-width: 768px) {
       #PieDePagina .RRSS {
-        margin-left: 75%;
+        margin-left: 50%;
         margin-top: 0px;
         padding-top: 0px;
         padding-bottom: 5px; } }
